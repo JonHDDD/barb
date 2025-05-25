@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БАРБЕРШОП - Стильні стрижки</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <!-- Скрипт для завантаження фрагментів -->
+    <script src="../src/include.js"></script>
+</head>
+<body>
+<header data-include="header.html"></header>
+<main>
+    <section th:fragment="about" class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">Про нас</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="../images/about.png" alt="Наш барбершоп">
+                </div>
+                <div class="about-text">
+                    <h3>Ми створюємо стиль та впевненість</h3>
+                    <p>Наш барбершоп - це місце, де чоловіки можуть розслабитися, отримати якісну стрижку та догляд за
+                        бородою. Ми використовуємо лише найкращі інструменти та косметику для наших клієнтів.</p>
+                    <p>Ми пишаємося створенням атмосфери, де кожен клієнт відчуває себе особливим. Наші майстри - це
+                        професіонали з багаторічним досвідом, які постійно вдосконалюють свої навички.</p>
+                    <p>Наша місія - допомогти кожному чоловікові виглядати та почуватися краще, надаючи високоякісні
+                        послуги
+                        у дружній та комфортній атмосфері.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+>
+<!-- Підвал -->
+<footer data-include="footer.html"></footer>
+<script src="../src/main.js"></script>
+</body>
+</html>

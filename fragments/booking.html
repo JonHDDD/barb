@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БАРБЕРШОП - Стильні стрижки</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="../public/modal.css">
+    <!-- Скрипт для завантаження фрагментів -->
+    <script src="../src/include.js"></script>
+    <script src="../src/booking.js"></script>
+</head>
+<body>
+<header data-include="header.html"></header>
+<main>
+    <section th:fragment="booking" class="booking-section" id="booking">
+        <div class="container">
+            <h2 class="section-title">Записатися онлайн</h2>
+            <div class="booking-form">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Ваше ім'я" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" name="phone" placeholder="Ваш телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Ваш email" required>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" name="service" required>
+                            <option value="">Оберіть послугу</option>
+                            <option value="haircut">Чоловіча стрижка</option>
+                            <option value="beard">Стрижка та оформлення бороди</option>
+                            <option value="shaving">Королівське гоління</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" name="barber" id="barber-select" required>
+                            <option value="">Оберіть барбера</option>
+                            <option value="Дана">Дана</option>
+                            <option value="Богдан">Богдан</option>
+                            <option value="Альбіна">Альбіна</option>
+                            <option value="Михайло">Михайло</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" name="date" id="date-input" required>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" name="time" required>
+                            <option value="">Оберіть час</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Записатися</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Модальне вікно успіху -->
+<div class="modal modal-success" id="successModal">
+    <div class="modal-content">
+        <div class="modal-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3 class="modal-title">Успішно!</h3>
+        <p class="modal-text">Ваш запис успішно створено! Ми зв'яжемося з вами для підтвердження.</p>
+        <button class="modal-close" onclick="closeModal('successModal')">Зрозуміло</button>
+    </div>
+</div>
+
+<!-- Модальне вікно помилки -->
+<div class="modal modal-error" id="errorModal">
+    <div class="modal-content">
+        <div class="modal-icon">
+            <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <h3 class="modal-title">Помилка!</h3>
+        <p class="modal-text">Виникла помилка при створенні запису. Будь ласка, спробуйте пізніше або зв'яжіться з нами
+            за телефоном.</p>
+        <button class="modal-close" onclick="closeModal('errorModal')">Зрозуміло</button>
+    </div>
+</div>
+<footer data-include="footer.html"></footer>
+</body>
+</html>

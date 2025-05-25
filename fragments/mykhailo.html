@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БАРБЕРШОП - Стильні стрижки</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <!-- Скрипт для завантаження фрагментів -->
+    <script src="../src/include.js"></script>
+</head>
+<body>
+<header data-include="header.html"></header>
+<main>
+    <section th:fragment="barber" class="barber-section" id="barber">
+        <div class="container">
+            <h2 class="section-title">Михайло</h2>
+            <div class="barber-info">
+                <img src="../images/mykhailo.jpg" alt="Барбер 4">
+                <div>
+                    <p>Михайло — справжній майстер своєї справи, який уже багато років допомагає клієнтам виглядати
+                        стильно та доглянуто. Його досвід, впевнені рухи та глибоке розуміння сучасних тенденцій роблять
+                        кожну стрижку результатом високого професіоналізму.</p>
+                    <p>Він уміло поєднує класичні техніки з актуальними трендами, створюючи образи, що не просто
+                        прикрашають, а підкреслюють характер. Михайло уважний до деталей, завжди вислухає клієнта, дасть
+                        пораду й точно втілить бажане.</p>
+                    <ul>
+                        <li>Чіткі та стильні стрижки</li>
+                        <li>Акуратне та комфортне робоче місце</li>
+                        <li>Індивідуальний підхід до кожного</li>
+                        <li>Спокійна атмосфера й приємне спілкування</li>
+                    </ul>
+                    <p>Михайло не просто створює зачіску — він дбає про ваш комфорт і настрій. Його вибирають не
+                        випадково, а повертаються знову і знову за якістю, стабільністю та позитивними емоціями.</p>
+                </div>
+            </div>
+            <h2 class="section-title">Портфоліо</h2>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio1.jpg" alt="Робота 1" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio2.jpg" alt="Робота 2" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio3.jpg" alt="Робота 3" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio4.jpg" alt="Робота 4" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio5.jpg" alt="Робота 3" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio6.jpg" alt="Робота 4" class="portfolio-image">
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+<footer data-include="footer.html"></footer>
+</body>
+</html>

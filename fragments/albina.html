@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БАРБЕРШОП - Стильні стрижки</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <!-- Скрипт для завантаження фрагментів -->
+    <script src="../src/include.js"></script>
+</head>
+<body>
+<header data-include="header.html"></header>
+<main>
+    <section th:fragment="barber" class="barber-section" id="barber">
+        <div class="container">
+            <h2 class="section-title">Альбіна</h2>
+            <div class="barber-info">
+                <img src="../images/albina.jpg" alt="Барбер 3">
+                <div>
+                    <p>Альбіна — досвідчена барберка з чудовим почуттям стилю та щирим ставленням до кожного клієнта.
+                        Вона вже багато років у професії й з упевненістю творить образи, які підкреслюють
+                        індивідуальність і додають впевненості. Її професіоналізм і акуратність відчуваються з перших
+                        хвилин роботи.</p>
+                    <p>У своїй роботі Альбіна вдало поєднує класичні техніки та сучасні тренди, створюючи стрижки, що
+                        виглядають актуально і стильно. Вона завжди уважно вислухає побажання клієнта, порадить
+                        оптимальне рішення і виконає свою справу бездоганно — з увагою до кожної деталі.</p>
+                    <ul>
+                        <li>Якісні, точні стрижки</li>
+                        <li>Комфортне та чисте робоче місце</li>
+                        <li>Уважність і турбота до кожного клієнта</li>
+                        <li>Дружнє спілкування та приємна атмосфера</li>
+                    </ul>
+                    <p>Для Альбіни важливо не просто зробити хорошу зачіску, а подарувати приємні враження та настрій.
+                        Саме тому клієнти охоче повертаються до неї знову.</p>
+                </div>
+            </div>
+            <h2 class="section-title">Портфоліо</h2>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio1.jpg" alt="Робота 1" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio2.jpg" alt="Робота 2" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio3.jpg" alt="Робота 3" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio4.jpg" alt="Робота 4" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio5.jpg" alt="Робота 3" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio6.jpg" alt="Робота 4" class="portfolio-image">
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+<footer data-include="footer.html"></footer>
+</body>
+</html>

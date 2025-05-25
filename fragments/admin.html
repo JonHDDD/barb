@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БАРБЕРШОП - Адміністративна панель</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="../public/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header class="admin-header">
+    <div class="container header-container">
+        <div class="logo">БАРБЕР<span>ШОП</span> АДМІН</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active" data-tab="bookings">Записи</a></li>
+                <li><a href="#" data-tab="reviews">Відгуки</a></li>
+                <li><a href="index.html" target="_blank">На сайт</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="admin-main">
+    <div class="container">
+        <!-- Записи -->
+        <section id="bookings" class="admin-section active">
+            <h2 class="section-title">Управління записами</h2>
+
+            <div class="admin-filters">
+                <div class="filter-group">
+                    <label for="dateFilter">Фільтр за датою:</label>
+                    <input type="date" id="dateFilter" class="form-control">
+                </div>
+                <button id="resetFilters" class="btn">Скинути фільтри</button>
+            </div>
+
+            <div class="admin-table-container">
+                <table class="admin-table" id="bookingsTable">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ім'я</th>
+                        <th>Телефон</th>
+                        <th>Email</th>
+                        <th>Послуга</th>
+                        <th>Барбер</th>
+                        <th>Дата</th>
+                        <th>Час</th>
+                        <th>Дії</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Тут відображатимуться записи -->
+                    <tr>
+                        <td colspan="8" class="loading-cell">
+                            <i class="fas fa-spinner fa-spin"></i> Завантаження...
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Відгуки -->
+        <section id="reviews" class="admin-section">
+            <h2 class="section-title">Управління відгуками</h2>
+
+            <div class="admin-table-container">
+                <table class="admin-table" id="reviewsTable">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ім'я</th>
+                        <th>Телефон</th>
+                        <th>Відгук</th>
+                        <th>Дії</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Тут будуть відображатися відгуки -->
+                    <tr>
+                        <td colspan="5" class="loading-cell">
+                            <i class="fas fa-spinner fa-spin"></i> Завантаження...
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Модальне вікно для підтвердження видалення -->
+<div class="modal" id="deleteConfirmModal">
+    <div class="modal-content">
+        <div class="modal-icon modal-warning">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h3 class="modal-title">Підтвердження видалення</h3>
+        <p class="modal-text">Ви впевнені, що хочете видалити цей запис? Ця дія незворотна.</p>
+        <div class="modal-buttons">
+            <button class="btn btn-cancel" onclick="closeModal('deleteConfirmModal')">Скасувати</button>
+            <button class="btn btn-danger" id="confirmDeleteBtn">Видалити</button>
+        </div>
+    </div>
+</div>
+
+<!-- Модальне вікно успіху -->
+<div class="modal modal-success" id="successModal">
+    <div class="modal-content">
+        <div class="modal-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3 class="modal-title">Успішно!</h3>
+        <p class="modal-text" id="successMessage">Операція виконана успішно.</p>
+        <button class="modal-close" onclick="closeModal('successModal')">Зрозуміло</button>
+    </div>
+</div>
+
+<!-- Модальне вікно помилки -->
+<div class="modal modal-error" id="errorModal">
+    <div class="modal-content">
+        <div class="modal-icon">
+            <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <h3 class="modal-title">Помилка!</h3>
+        <p class="modal-text" id="errorMessage">Виникла помилка при виконанні операції.</p>
+        <button class="modal-close" onclick="closeModal('errorModal')">Зрозуміло</button>
+    </div>
+</div>
+
+<script src="../src/admin.js"></script>
+</body>
+</html>

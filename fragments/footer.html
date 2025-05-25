@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<body>
+<footer th:fragment="footer">
+    <div class="container">
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+        </div>
+        <div class="copyright">
+            &copy; 2025 БАРБЕРШОП. Усі права захищені.
+        </div>
+    </div>
+</footer>
+
+<th:block th:fragment="scripts">
+    <script th:src="@{/js/main.js}"></script>
+    <script th:src="@{/js/booking.js}"></script>
+</th:block>
+</body>
+</html>

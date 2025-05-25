@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БАРБЕРШОП - Стильні стрижки</title>
+    <link rel="stylesheet" href="../public/style.css">
+    <!-- Скрипт для завантаження фрагментів -->
+    <script src="../src/include.js"></script>
+</head>
+<body>
+<header data-include="header.html"></header>
+<main>
+    <section th:fragment="barber" class="barber-section" id="barber">
+        <div class="container">
+            <h2 class="section-title">Дана</h2>
+            <div class="barber-info">
+                <img src="../images/dana.jpg" alt="Барбер 1">
+                <div>
+                    <p>Дана — досвідчений барбер з багаторічним стажем, яка вже понад 5 років дарує клієнтам не просто
+                        стильні зачіски, а впевненість у собі. Вона відома своїм професіоналізмом, уважністю до деталей
+                        і
+                        щирим ставленням до кожного відвідувача.</p>
+                    <p>Її підхід до роботи — це поєднання класичних технік та сучасних трендів, що дозволяє створювати
+                        унікальний образ, який підходить саме вам. Дана завжди уважно вислухає побажання клієнта,
+                        порадить
+                        найкраще рішення та подбає про кожен штрих.</p>
+                    <ul>
+                        <li>Ідеальні стрижки</li>
+                        <li>Чисте та комфортне робоче місце</li>
+                        <li>Індивідуальний підхід</li>
+                        <li>Щира посмішка та приємна атмосфера</li>
+                    </ul>
+                    <p>Для Дани важливо, щоб кожен клієнт виходив із салону не тільки з новою зачіскою, а й з гарним
+                        настроєм. Саме тому її обирають знову і знову.</p>
+                </div>
+            </div>
+            <h2 class="section-title">Портфоліо</h2>
+            <div class="portfolio">
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio1.jpg" alt="Робота 1" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio2.jpg" alt="Робота 2" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio3.jpg" alt="Робота 3" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio4.jpg" alt="Робота 4" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio5.jpg" alt="Робота 3" class="portfolio-image">
+                </div>
+                <div class="portfolio-item">
+                    <img src="../images/portfolio/portfolio6.jpg" alt="Робота 4" class="portfolio-image">
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+<footer data-include="footer.html"></footer>
+</body>
+</html>
